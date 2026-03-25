@@ -1,0 +1,11 @@
+{
+    "user_id": "@test300:im-sq01.chunquqiulai.top",
+    "access_token": "syt_dGVzdDMwMA_DcQFiAlBsaLgovYqOJJU_3JF3BR",
+    "home_server": "im-sq01.chunquqiulai.top",
+    "device_id": "AUXDMEQWQO",
+    "well_known": {
+        "m.homeserver": {
+            "base_url": "https://im-sq01.chunquqiulai.top/"
+        }
+    }
+}

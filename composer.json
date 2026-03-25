@@ -1,0 +1,97 @@
+{
+    "name": "xvideos/admin",
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "ext-swoole": ">=5.0",
+        "duncan3dc/blade": "^4.10",
+        "hyperf/async-queue": "~3.0",
+        "hyperf/cache": "~3.0.0",
+        "hyperf/code-generator": "^0.3.3",
+        "hyperf/command": "~3.0",
+        "hyperf/config": "~3.0",
+        "hyperf/constants": "~3.0",
+        "hyperf/contract": "3.0.*",
+        "hyperf/crontab": "~3.0",
+        "hyperf/database": "3.0.*",
+        "hyperf/database-pgsql": "3.0.*",
+        "hyperf/db-connection": "~3.0",
+        "hyperf/elasticsearch": "~3.0",
+        "hyperf/framework": "~3.0",
+        "hyperf/guzzle": "~3.0",
+        "hyperf/http-server": "~3.0",
+        "hyperf/logger": "~3.0",
+        "hyperf/memory": "~3.0",
+        "hyperf/model-cache": "~3.0",
+        "hyperf/paginator": "~3.0",
+        "hyperf/process": "~3.0",
+        "hyperf/redis": "~3.0",
+        "hyperf/session": "~3.0",
+        "hyperf/support": "3.0.*",
+        "hyperf/task": "~3.0",
+        "hyperf/translation": "~3.0",
+        "hyperf/utils": "~3.0",
+        "hyperf/validation": "~3.0",
+        "hyperf/view": "~3.0",
+        "phpmailer/phpmailer": "^7.0",
+        "zoujingli/ip2region": "^1.0"
+    },
+    "require-dev": {
+        "swoole/ide-helper": "^4.6",
+        "doctrine/annotations": "^1.6",
+        "doctrine/inflector": "^2.0",
+        "doctrine/instantiator": "^1.0",
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "mockery/mockery": "^1.0",
+        "phpstan/phpstan": "^0.12",
+        "hyperf/devtool": "~3.0",
+        "hyperf/watcher": "~3.0"
+    },
+    "suggest": {
+        "ext-openssl": "Required to use HTTPS.",
+        "ext-pdo": "Required to use MySQL Client.",
+        "ext-pdo_mysql": "Required to use MySQL Client.",
+        "ext-redis": "Required to use Redis Client."
+    },
+    "type": "project",
+    "keywords": [
+        "php",
+        "swoole",
+        "framework",
+        "hyperf",
+        "microservice",
+        "middleware"
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Hyperf\\Context\\": "app/Common/"
+        },
+        "files": []
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HyperfTest\\": "./test/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-autoload-dump": [
+            "rm -rf runtime/container"
+        ],
+        "test": "co-phpunit -c phpunit.xml --colors=always",
+        "cs-fix": "php-cs-fixer fix $1",
+        "analyse": "phpstan analyse --memory-limit 256M -l 0 -c phpstan.neon ./app ./config",
+        "start": "php ./bin/hyperf.php start"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "prefer-stable": true,
+    "description": "A coroutine framework that focuses on hyperspeed and flexible, specifically use for build microservices and middlewares.",
+    "license": "Apache-2.0"
+}
