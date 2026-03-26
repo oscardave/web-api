@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-03-26T08:05:57.044Z",
+  "stats": {
+    "total_files": 43,
+    "files_by_layer": {
+      "rules": 1,
+      "business": 42
+    },
+    "missing_files": 0,
+    "total_chunks": 603,
+    "chunks_by_layer": {
+      "rules": 9,
+      "business": 594
+    },
+    "chunk_sizes": {
+      "min": 23,
+      "max": 5307,
+      "median": 261,
+      "avg": 401
+    },
+    "empty_chunks": 0,
+    "oversize_chunks": 1,
+    "tiny_chunks": 5,
+    "chunks_file_size_kb": 493,
+    "coverage": {
+      "manifest_files": 43,
+      "chunked_files": 43,
+      "uncovered": []
+    },
+    "health_score": 95
+  },
+  "issues": [
+    {
+      "severity": "info",
+      "message": "Tiny chunk (31 chars): chunk-0011 in docs/ai-lessons-learned.md"
+    },
+    {
+      "severity": "warn",
+      "message": "Oversize chunk (5307 chars): chunk-0029 in docs/AI开发文档.md"
+    },
+    {
+      "severity": "info",
+      "message": "Tiny chunk (49 chars): chunk-0185 in docs/plans/260326-1500-rag-system-completion/phase-03-lessons-seed.md"
+    },
+    {
+      "severity": "info",
+      "message": "Tiny chunk (23 chars): chunk-0390 in docs/徽章配置接口_对接文档.md"
+    },
+    {
+      "severity": "info",
+      "message": "Tiny chunk (29 chars): chunk-0484 in docs/登录注册接口-前端对接文档.md"
+    },
+    {
+      "severity": "info",
+      "message": "Tiny chunk (29 chars): chunk-0486 in docs/登录注册接口-前端对接文档.md"
+    }
+  ]
+}

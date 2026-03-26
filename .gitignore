@@ -19,3 +19,6 @@ nginx-access.log
 nginx-error.log
 
 conf/dump.rdb
+
+node_modules/
+.cursor/rag-calls.log

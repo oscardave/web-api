@@ -1,0 +1,440 @@
+{
+  "generated_at": "2026-03-26T08:05:56.767Z",
+  "total_files": 43,
+  "by_layer": {
+    "rules": 1,
+    "business": 42
+  },
+  "files": [
+    {
+      "path": ".cursor/rules/sentinel.mdc",
+      "layer": "rules",
+      "module": "global-rules",
+      "title": "Sentinel · PHP/Hyperf 常驻哨兵规则",
+      "size": 4371,
+      "lines": 113,
+      "hash": "f99692dee1e4",
+      "modified": "2026-03-26T07:16:45.602Z"
+    },
+    {
+      "path": "docs/ai-lessons-learned.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "AI 踩坑记录",
+      "size": 3114,
+      "lines": 82,
+      "hash": "c70babc512b8",
+      "modified": "2026-03-26T07:03:15.881Z"
+    },
+    {
+      "path": "docs/AI开发文档.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "一、仓库整体说明",
+      "size": 23956,
+      "lines": 347,
+      "hash": "cb3676639bbe",
+      "modified": "2026-03-26T00:40:14.901Z"
+    },
+    {
+      "path": "docs/auth-bindrebind-api.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "用户认证、绑定与换绑 API 接口文档",
+      "size": 18502,
+      "lines": 810,
+      "hash": "920de4c31cd2",
+      "modified": "2026-03-26T00:40:14.901Z"
+    },
+    {
+      "path": "docs/chat-groups-api.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "聊天分组 API 接口文档",
+      "size": 10987,
+      "lines": 518,
+      "hash": "afe7021e1d57",
+      "modified": "2026-03-26T00:40:14.901Z"
+    },
+    {
+      "path": "docs/chats-api.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "聊天列表 API 接口文档",
+      "size": 16090,
+      "lines": 553,
+      "hash": "4bc10bf25753",
+      "modified": "2026-03-26T00:40:14.901Z"
+    },
+    {
+      "path": "docs/circle-badges-api.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "圈子徽章列表接口 - 前端对接文档",
+      "size": 4227,
+      "lines": 156,
+      "hash": "a5602660c3f3",
+      "modified": "2026-03-26T00:40:14.902Z"
+    },
+    {
+      "path": "docs/code-patterns.md",
+      "layer": "business",
+      "module": "engineering",
+      "title": "黄金参考代码模式",
+      "size": 15187,
+      "lines": 538,
+      "hash": "4f8e57b6e1fa",
+      "modified": "2026-03-26T05:13:54.985Z"
+    },
+    {
+      "path": "docs/engineering-rules.md",
+      "layer": "business",
+      "module": "engineering",
+      "title": "工程规范",
+      "size": 8797,
+      "lines": 288,
+      "hash": "9f410ee72508",
+      "modified": "2026-03-26T05:13:59.837Z"
+    },
+    {
+      "path": "docs/member-profile-account-api.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "会员等级、用户资料与账户余额 API 接口文档",
+      "size": 9073,
+      "lines": 343,
+      "hash": "696769e51a08",
+      "modified": "2026-03-26T00:40:14.902Z"
+    },
+    {
+      "path": "docs/nginx-http2-fix.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "修复 ERR_HTTP2_PROTOCOL_ERROR 200 (OK)",
+      "size": 2960,
+      "lines": 81,
+      "hash": "8af43b806551",
+      "modified": "2026-03-26T00:40:14.902Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-01-agents-entry.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 01: AGENTS.md — 多 Agent 入口",
+      "size": 5103,
+      "lines": 137,
+      "hash": "97a03c75a2a7",
+      "modified": "2026-03-26T05:38:24.867Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-02-rules-index.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 02: docs/rules-index.md — 规则加载索引",
+      "size": 5684,
+      "lines": 164,
+      "hash": "25ccf09d1119",
+      "modified": "2026-03-26T05:38:58.166Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-03-lessons-seed.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 03: 填充 ai-lessons-learned.md",
+      "size": 4645,
+      "lines": 145,
+      "hash": "800112aabe80",
+      "modified": "2026-03-26T05:39:32.672Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-04-knowledge-sync.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 04: scripts/ai-knowledge-sync.sh — 知识漂移检测",
+      "size": 9291,
+      "lines": 317,
+      "hash": "ada9a288f063",
+      "modified": "2026-03-26T05:40:26.383Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-05-business-glossary.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 05: knowledge/business-glossary.md — 业务术语词典",
+      "size": 5974,
+      "lines": 144,
+      "hash": "2262d8da5bb1",
+      "modified": "2026-03-26T05:41:06.325Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-06-wire-routing.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 06: 将新文档接入 sentinel 路由和闸门",
+      "size": 5225,
+      "lines": 171,
+      "hash": "3a02829b9d95",
+      "modified": "2026-03-26T05:41:33.509Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-07-rag-setup.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 07: Node.js RAG 工具链初始化",
+      "size": 5884,
+      "lines": 225,
+      "hash": "3b5486618fe7",
+      "modified": "2026-03-26T05:42:08.747Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-08-rag-index-chunks.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 08: RAG 索引清单 + 分块脚本",
+      "size": 9398,
+      "lines": 321,
+      "hash": "8fb322507b91",
+      "modified": "2026-03-26T05:42:47.990Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-09-rag-export-quality.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 09: RAG 导出 + 质量检查",
+      "size": 8424,
+      "lines": 279,
+      "hash": "00744e6f5314",
+      "modified": "2026-03-26T05:43:19.079Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-10-rag-update-readme.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 10: RAG Pipeline 入口 + Pipeline 文档",
+      "size": 5688,
+      "lines": 194,
+      "hash": "79db9ec06e02",
+      "modified": "2026-03-26T05:43:55.506Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-11-mcp-server.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 11: MCP RAG Server + Cursor 注册",
+      "size": 9216,
+      "lines": 328,
+      "hash": "a74ca4556371",
+      "modified": "2026-03-26T05:44:38.641Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-12-memory-facts-decisions.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 12: Memory 层 — 事实和决策",
+      "size": 5278,
+      "lines": 171,
+      "hash": "787a42abe980",
+      "modified": "2026-03-26T05:45:21.849Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/phase-13-memory-prefs-lessons.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Phase 13: Memory 层 — 偏好和经验教训",
+      "size": 5619,
+      "lines": 168,
+      "hash": "becb0ad97847",
+      "modified": "2026-03-26T05:45:57.604Z"
+    },
+    {
+      "path": "docs/plans/260326-1500-rag-system-completion/SUMMARY.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "Implementation Plan: RAG 系统完善",
+      "size": 9158,
+      "lines": 175,
+      "hash": "ed79ac3e9c80",
+      "modified": "2026-03-26T05:37:43.973Z"
+    },
+    {
+      "path": "docs/rules-index.md",
+      "layer": "business",
+      "module": "docs",
+      "title": "规则加载索引",
+      "size": 3252,
+      "lines": 87,
+      "hash": "b1a12a7ac6a8",
+      "modified": "2026-03-26T05:52:40.332Z"
+    },
+    {
+      "path": "docs/upload-api.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "上传接口说明",
+      "size": 3540,
+      "lines": 106,
+      "hash": "5894152111c2",
+      "modified": "2026-03-26T00:40:14.902Z"
+    },
+    {
+      "path": "docs/会员兑换_对接文档.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "会员等级兑换接口对接文档",
+      "size": 3536,
+      "lines": 137,
+      "hash": "69582ff63b48",
+      "modified": "2026-03-26T00:40:14.902Z"
+    },
+    {
+      "path": "docs/全局配置接口对接文档.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "全局配置接口对接文档",
+      "size": 2600,
+      "lines": 106,
+      "hash": "33946ac0421c",
+      "modified": "2026-03-26T00:40:14.902Z"
+    },
+    {
+      "path": "docs/前台上传接口-前端对接文档.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "前台上传接口 - 前端对接文档",
+      "size": 6123,
+      "lines": 183,
+      "hash": "2dc118add8c0",
+      "modified": "2026-03-26T00:40:14.902Z"
+    },
+    {
+      "path": "docs/前端WebSocket账变推送对接文档.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "前端 WebSocket 账变推送对接文档",
+      "size": 6711,
+      "lines": 205,
+      "hash": "604c7cc64e5d",
+      "modified": "2026-03-26T00:40:14.902Z"
+    },
+    {
+      "path": "docs/徽章配置接口_对接文档.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "徽章配置接口对接文档",
+      "size": 6052,
+      "lines": 245,
+      "hash": "47aa6983cd44",
+      "modified": "2026-03-26T00:40:14.902Z"
+    },
+    {
+      "path": "docs/登录注册与绑定手机邮箱-前端对接文档.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "登录注册与绑定手机/邮箱接口 - 前端对接文档",
+      "size": 19619,
+      "lines": 549,
+      "hash": "34340a8f58ce",
+      "modified": "2026-03-26T00:40:14.903Z"
+    },
+    {
+      "path": "docs/登录注册接口-前端对接文档.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "登录注册接口 - 前端对接文档",
+      "size": 18378,
+      "lines": 585,
+      "hash": "91bbe43afcd3",
+      "modified": "2026-03-26T00:40:14.903Z"
+    },
+    {
+      "path": "docs/绑定手机邮箱接口-前端对接文档.md",
+      "layer": "business",
+      "module": "api-docs",
+      "title": "绑定手机/邮箱接口 - 前端对接文档",
+      "size": 5672,
+      "lines": 209,
+      "hash": "778736428fd1",
+      "modified": "2026-03-26T00:40:14.903Z"
+    },
+    {
+      "path": "knowledge/01-项目总览与架构.md",
+      "layer": "business",
+      "module": "knowledge/01-项目总览与架构",
+      "title": "01 · 项目总览与系统架构",
+      "size": 6333,
+      "lines": 119,
+      "hash": "e30a460e5db1",
+      "modified": "2026-03-26T05:20:01.430Z"
+    },
+    {
+      "path": "knowledge/02-技术栈详解.md",
+      "layer": "business",
+      "module": "knowledge/02-技术栈详解",
+      "title": "02 · 技术栈详解",
+      "size": 4979,
+      "lines": 136,
+      "hash": "193592567fe4",
+      "modified": "2026-03-26T05:18:14.862Z"
+    },
+    {
+      "path": "knowledge/03-API接口全览.md",
+      "layer": "business",
+      "module": "knowledge/03-API接口全览",
+      "title": "03 · API 接口全览",
+      "size": 10691,
+      "lines": 233,
+      "hash": "caa03907f935",
+      "modified": "2026-03-26T05:18:14.862Z"
+    },
+    {
+      "path": "knowledge/04-数据库模型说明.md",
+      "layer": "business",
+      "module": "knowledge/04-数据库模型说明",
+      "title": "04 · 数据库模型说明",
+      "size": 7963,
+      "lines": 196,
+      "hash": "e328bf44247e",
+      "modified": "2026-03-26T05:18:14.863Z"
+    },
+    {
+      "path": "knowledge/05-业务逻辑详解.md",
+      "layer": "business",
+      "module": "knowledge/05-业务逻辑详解",
+      "title": "05 · 业务逻辑详解",
+      "size": 7433,
+      "lines": 218,
+      "hash": "8d70e7fb2c20",
+      "modified": "2026-03-26T05:18:14.863Z"
+    },
+    {
+      "path": "knowledge/06-核心模块与开发规范.md",
+      "layer": "business",
+      "module": "knowledge/06-核心模块与开发规范",
+      "title": "06 · 核心模块与开发规范",
+      "size": 7004,
+      "lines": 294,
+      "hash": "5ce587791aaf",
+      "modified": "2026-03-26T05:18:14.864Z"
+    },
+    {
+      "path": "knowledge/business-glossary.md",
+      "layer": "business",
+      "module": "knowledge/business-glossary",
+      "title": "业务术语词典",
+      "size": 3117,
+      "lines": 60,
+      "hash": "bdad682cb58c",
+      "modified": "2026-03-26T07:05:37.568Z"
+    },
+    {
+      "path": "knowledge/README.md",
+      "layer": "business",
+      "module": "knowledge/README",
+      "title": "web-api 项目知识库",
+      "size": 3359,
+      "lines": 84,
+      "hash": "72f8c78ee2d3",
+      "modified": "2026-03-26T07:05:44.984Z"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "web-api-rag-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RAG pipeline and MCP server for web-api AI development tools",
+  "type": "commonjs",
+  "scripts": {
+    "rag:update": "node scripts/rag/update.js",
+    "rag:index": "node scripts/rag/build-index-manifest.js",
+    "rag:chunks": "node scripts/rag/build-chunks.js",
+    "rag:export": "node scripts/rag/export-for-vector-db.js",
+    "rag:check": "node scripts/rag/check-quality.js",
+    "rag:stats": "node scripts/mcp/rag-call-stats.js"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.22.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

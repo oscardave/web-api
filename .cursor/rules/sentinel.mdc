@@ -1,0 +1,112 @@
+---
+description: 常驻哨兵——三闸门纪律、架构约定、编码红线、反模式拦截
+globs:
+alwaysApply: true
+---
+
+# Sentinel · PHP/Hyperf 常驻哨兵规则
+
+## 1. 三闸门执行纪律
+
+每次任务 **必须** 按顺序通过三道闸门，不可跳过、不可合并。
+
+| 阶段 | 命令                                | 时机               |
+| ---- | ----------------------------------- | ------------------ |
+| 入场 | `bash scripts/ai-gatekeeper.sh`     | 对话首轮           |
+| 规划 | `bash scripts/ai-plan.sh [S\|M\|L]` | 首次写代码前       |
+| 交付 | `bash scripts/ai-deliver.sh`        | 代码修改完成后     |
+
+**变更规模判定**：
+- **S**：≤2 文件变更
+- **M**：多文件 或 跨 Dao 引用
+- **L**：新模块 / 新 Controller / 跨层级变更
+
+脚本 `exit 1` 即阻断，修复后重新运行，不得绕过。
+
+**可选闸门**（核心代码变更时推荐执行）：
+
+| 阶段     | 命令                                            | 时机                   |
+| -------- | ----------------------------------------------- | ---------------------- |
+| 知识同步 | `bash scripts/ai-knowledge-sync.sh [--warn-only]` | 核心代码变更 + 交付前  |
+
+S 级变更使用 `--warn-only`；M/L 级变更为硬阻断。
+
+## 2. 知识路由
+
+需要查阅规范时，按以下路径查找：
+
+| 内容               | 文件                              |
+| ------------------ | --------------------------------- |
+| 架构约定与编码规范   | `docs/engineering-rules.md`       |
+| 现有代码模式参考     | `docs/code-patterns.md`           |
+| 历史踩坑记录         | `docs/ai-lessons-learned.md`      |
+| 规则加载索引（SSOT） | `docs/rules-index.md`             |
+| Agent 入口与知识导航 | `AGENTS.md`                       |
+| 业务术语词典         | `knowledge/business-glossary.md`  |
+| 已冻结决策           | `memory/decisions.md`             |
+
+## 3. 架构约定
+
+### 三层架构
+
+Controller → Dao → DB / External（Service 为可选跨域层）
+
+目录映射：
+
+```
+app/Http/Backend/Controllers/   → 后台 Controller（prefix: /ht/v1/…）
+app/Http/Backend/Dao/           → 后台 Dao
+app/Http/Backend/Validations/   → 后台 Validation
+app/Http/Frontend/Controllers/  → 前台 Controller（prefix: api/v1/…）
+app/Http/Frontend/Dao/          → 前台 Dao
+app/Http/Internal/Controllers/  → 内部 Controller
+app/Service/                    → 跨域 Service（可选层）
+app/Model/                      → Eloquent Model
+```
+
+### 两套 JSON 信封（必须分清，不可混用）
+
+**Backend**（`/ht/v1/`）—— 继承 `BackendController`：
+
+```json
+{ "success": true, "message": null, "data": mixed }
+```
+
+方法：`$this->responseData($data)` / `$this->responseError($msg)` / `$this->responseSuccess($msg)`
+
+**Frontend**（`api/v1/`）—— 使用 `BaseJsonTrait`：
+
+```json
+{ "code": 0, "message": "", "data": mixed }
+```
+
+方法：`self::jsonResult($data)` / `self::jsonErr($msg)` / `self::jsonOk($msg)`
+
+### Dao 规范
+
+- 静态方法
+- 返回 `['error' => string, 'data' => ...]`
+- `error` 空字符串 `''` 表示成功
+
+### 依赖方向
+
+- Controller → Dao / Validation / Service（**单向**，禁止反向引用）
+- Backend / Frontend / Internal 三域**互斥**：不可跨域引用 Controller 或 Dao
+
+## 4. 编码红线
+
+- `declare(strict_types=1)` **必须**出现在每个 PHP 文件
+- 禁止 `var_dump` / `print_r` / `echo` / `dd` / `dump` 出现在非 `scripts/` 目录
+- 禁止注释掉的调试代码（如 `// print_r(...)` `// echo ...`）
+- 新方法**必须**有参数类型和返回类型声明
+- 禁止在 Controller 中直接写 SQL 查询（SQL 属于 Dao 层）
+
+## 5. 反模式拦截
+
+命中以下**任一**即刻停止，报告违规，不继续生成代码：
+
+1. **跳过闸门** —— 未执行入场 / 规划 / 交付脚本就开始或完成任务
+2. **篡改变更级别** —— 实际变更范围超过声明的 S/M/L 级别
+3. **信封混用** —— 在 Frontend Controller 中使用 `responseData` / `responseError` / `responseSuccess`，或在 Backend Controller 中使用 `jsonResult` / `jsonErr` / `jsonOk`
+4. **跨域引用** —— Backend Controller 引用 `App\Http\Frontend\Dao\*`（或反向）
+5. **Controller 写 SQL** —— Controller 方法体内出现 `Db::` 调用
